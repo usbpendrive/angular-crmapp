@@ -16,10 +16,9 @@ export class ContactListComponent implements OnInit {
   }
 
   public getContacts() {
-    this.apiService.getContats().subscribe((data: Array<object>) => {
+    this.apiService.getContacts().subscribe((data: Array<object>) => {
       this.contacts = data;
       console.log(data);
     });
   }
-
 }

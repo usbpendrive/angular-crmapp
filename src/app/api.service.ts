@@ -9,7 +9,10 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getContats() {
+  getContacts() {
     return this.httpClient.get(`${this.API_URL}/contacts`);
+  }
+  createContact(contact) {
+    return this.httpClient.post(`${this.API_URL}/contacts/`, contact);
   }
 }
